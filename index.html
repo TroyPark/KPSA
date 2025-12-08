@@ -230,6 +230,29 @@
             cursor: pointer;
         }
 
+        .mobile-contact-btn {
+            display: none;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 39, 73, 0.3);
+        }
+
+        .mobile-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
         .mobile-menu {
             display: none;
             padding-bottom: 1rem;
@@ -1374,6 +1397,10 @@
                 display: none;
             }
 
+            .mobile-contact-btn {
+                display: none;
+            }
+
             .hero h1 {
                 font-size: 3.5rem;
             }
@@ -1406,6 +1433,12 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
+
+        @media (max-width: 1023px) {
+            .mobile-contact-btn {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1426,9 +1459,12 @@
                     <a href="#" class="btn-contact" onclick="openModal(); return false;">무료 상담문의</a>
                 </nav>
 
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
-                    <span id="menu-icon">☰</span>
-                </button>
+                <div class="mobile-header-actions">
+                    <a href="#" class="mobile-contact-btn" onclick="openModal(); return false;">무료 상담문의</a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
+                        <span id="menu-icon">☰</span>
+                    </button>
+                </div>
             </div>
 
             <div class="mobile-menu" id="mobile-menu">
