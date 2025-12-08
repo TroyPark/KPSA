@@ -1423,7 +1423,7 @@
                     <a href="#government-support">정부지원사업</a>
                     <a href="#certification">기업인증</a>
                     <a href="#investment">투자유치</a>
-                    <a href="#" class="btn-contact" onclick="openModal(); return false;">상담문의</a>
+                    <a href="#" class="btn-contact" onclick="openModal(); return false;">무료 상담문의</a>
                 </nav>
 
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
@@ -1438,7 +1438,7 @@
                     <a href="#government-support" onclick="closeMobileMenu()">정부지원사업</a>
                     <a href="#certification" onclick="closeMobileMenu()">기업인증</a>
                     <a href="#investment" onclick="closeMobileMenu()">투자유치</a>
-                    <a href="#" class="btn-contact" onclick="closeMobileMenu(); openModal(); return false;">상담문의</a>
+                    <a href="#" class="btn-contact" onclick="closeMobileMenu(); openModal(); return false;">무료 상담문의</a>
                 </nav>
             </div>
         </div>
@@ -1461,7 +1461,7 @@
                 정책자금 & 무상지원금은 저희가 책임지겠습니다.
             </p>
             <div class="hero-buttons">
-                <a href="#" class="btn btn-primary" onclick="openModal(); return false;">상담 신청하기</a>
+                <a href="#" class="btn btn-primary" onclick="openModal(); return false;">무료 상담 신청하기</a>
                 <a href="#policy-fund" class="btn btn-accent">서비스 알아보기</a>
             </div>
         </div>
@@ -1864,7 +1864,7 @@
             <h2>정책자금 잘하는 컨설팅 회사가</h2>
             <h3>무상지원금도 잘합니다.</h3>
             <p class="subtitle">한국정책솔루션협회 상담신청하기</p>
-            <a href="#" class="btn btn-accent" onclick="openModal(); return false;">상담신청</a>
+            <a href="#" class="btn btn-accent" onclick="openModal(); return false;">무료 상담신청</a>
         </div>
     </section>
 
@@ -1887,7 +1887,7 @@
                         <li><a href="#government-support">정부지원사업</a></li>
                         <li><a href="#certification">기업인증</a></li>
                         <li><a href="#investment">투자유치</a></li>
-                        <li><a href="#" onclick="openModal(); return false;">상담문의</a></li>
+                        <li><a href="#" onclick="openModal(); return false;">무료 상담문의</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -1910,7 +1910,7 @@
     <div class="modal-overlay" id="contact-modal" onclick="closeModalOnOverlay(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <h2>상담 문의</h2>
+                <h2>무료 상담 문의</h2>
                 <button class="modal-close" onclick="closeModal()" aria-label="닫기">×</button>
             </div>
             <div class="modal-body">
@@ -1958,7 +1958,7 @@
 
                     <div id="alert-message-modal"></div>
 
-                    <button type="submit" class="form-submit" id="submit-btn-modal">상담 신청하기</button>
+                    <button type="submit" class="form-submit" id="submit-btn-modal">무료 상담 신청하기</button>
                     <p class="form-note">* 필수 항목은 반드시 입력해주세요</p>
                 </form>
             </div>
@@ -2027,7 +2027,7 @@
                 alertDiv.innerHTML = '<div class="alert alert-success">상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.</div>';
                 form.reset();
                 submitBtn.disabled = false;
-                submitBtn.textContent = '상담 신청하기';
+                submitBtn.textContent = '무료 상담 신청하기';
                 setTimeout(() => closeModal(), 2000);
             }, 1000);
         }
