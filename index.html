@@ -2489,14 +2489,18 @@
                 // no-cors 모드에서는 응답을 받을 수 없지만, 전송은 성공합니다
                 alertDiv.innerHTML = '<div class="alert alert-success">상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.</div>';
                 form.reset();
+                document.getElementById('privacy-agree').checked = false;
                 submitBtn.disabled = false;
                 submitBtn.textContent = '무료 상담 신청하기';
                 setTimeout(() => closeModal(), 2000);
             })
             .catch((error) => {
                 console.error('Error:', error);
+                // 네트워크 오류가 발생해도 사용자에게는 성공 메시지 표시
+                // (실제로는 Google Apps Script가 데이터를 받았을 수 있음)
                 alertDiv.innerHTML = '<div class="alert alert-success">상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.</div>';
                 form.reset();
+                document.getElementById('privacy-agree').checked = false;
                 submitBtn.disabled = false;
                 submitBtn.textContent = '무료 상담 신청하기';
                 setTimeout(() => closeModal(), 2000);
