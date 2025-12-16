@@ -1,4 +1,4 @@
-﻿        * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -193,6 +193,45 @@
             width: 100%;
         }
 
+        nav.desktop-nav a[href="kpsa_landing.html"] {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        nav.desktop-nav a[href="index.html"] {
+            background: linear-gradient(135deg, var(--accent), #f4c430);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(217, 162, 82, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        nav.desktop-nav a[href="kpsa_landing.html"]::after,
+        nav.desktop-nav a[href="index.html"]::after {
+            display: none;
+        }
+        
+        nav.desktop-nav a[href="kpsa_landing.html"]:hover {
+            background: linear-gradient(135deg, #45a049, #4CAF50);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5);
+            color: white;
+        }
+        
+        nav.desktop-nav a[href="index.html"]:hover {
+            background: linear-gradient(135deg, #f4c430, var(--accent));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 162, 82, 0.5);
+            color: white;
+        }
+        
         nav.desktop-nav .btn-contact {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -275,6 +314,44 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
+        }
+        
+        .mobile-menu a[href="kpsa_landing.html"] {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .mobile-menu a[href="index.html"] {
+            background: linear-gradient(135deg, var(--accent), #f4c430);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(217, 162, 82, 0.3);
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .mobile-menu a[href="kpsa_landing.html"]:hover {
+            background: linear-gradient(135deg, #45a049, #4CAF50);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5);
+            color: white;
+        }
+        
+        .mobile-menu a[href="index.html"]:hover {
+            background: linear-gradient(135deg, #f4c430, var(--accent));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 162, 82, 0.5);
+            color: white;
         }
 
         .mobile-menu a:hover {
