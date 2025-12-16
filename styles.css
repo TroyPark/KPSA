@@ -173,8 +173,8 @@
             position: relative;
             transition: color 0.3s ease;
         }
-
-        nav.desktop-nav a::after {
+        
+        nav.desktop-nav a:not([href="kpsa_landing.html"]):not([href="index.html"])::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -185,51 +185,53 @@
             transition: width 0.3s ease;
         }
 
-        nav.desktop-nav a:hover {
+        nav.desktop-nav a:not([href="kpsa_landing.html"]):not([href="index.html"]):hover {
             color: var(--accent);
         }
 
-        nav.desktop-nav a:hover::after {
+        nav.desktop-nav a:not([href="kpsa_landing.html"]):not([href="index.html"]):hover::after {
             width: 100%;
         }
 
         nav.desktop-nav a[href="kpsa_landing.html"] {
-            background: linear-gradient(135deg, #4CAF50, #45a049);
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 700;
-            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+            color: white !important;
+            padding: 0.5rem 1.2rem !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+            transition: all 0.3s ease !important;
+            margin: 0 0.5rem !important;
         }
         
         nav.desktop-nav a[href="index.html"] {
-            background: linear-gradient(135deg, var(--accent), #f4c430);
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 700;
-            box-shadow: 0 2px 8px rgba(217, 162, 82, 0.3);
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, var(--accent), #f4c430) !important;
+            color: white !important;
+            padding: 0.5rem 1.2rem !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 2px 8px rgba(217, 162, 82, 0.3) !important;
+            transition: all 0.3s ease !important;
+            margin: 0 0.5rem !important;
         }
         
         nav.desktop-nav a[href="kpsa_landing.html"]::after,
         nav.desktop-nav a[href="index.html"]::after {
-            display: none;
+            display: none !important;
         }
         
         nav.desktop-nav a[href="kpsa_landing.html"]:hover {
-            background: linear-gradient(135deg, #45a049, #4CAF50);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5);
-            color: white;
+            background: linear-gradient(135deg, #45a049, #4CAF50) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5) !important;
+            color: white !important;
         }
         
         nav.desktop-nav a[href="index.html"]:hover {
-            background: linear-gradient(135deg, #f4c430, var(--accent));
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(217, 162, 82, 0.5);
-            color: white;
+            background: linear-gradient(135deg, #f4c430, var(--accent)) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(217, 162, 82, 0.5) !important;
+            color: white !important;
         }
         
         nav.desktop-nav .btn-contact {
@@ -1576,6 +1578,31 @@
             nav.desktop-nav {
                 display: flex;
                 align-items: center;
+            }
+            
+            nav.desktop-nav a[href="kpsa_landing.html"] {
+                background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+                color: white !important;
+                padding: 0.5rem 1.2rem !important;
+                border-radius: 8px !important;
+                font-weight: 700 !important;
+                box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+                margin: 0 0.5rem !important;
+            }
+            
+            nav.desktop-nav a[href="index.html"] {
+                background: linear-gradient(135deg, var(--accent), #f4c430) !important;
+                color: white !important;
+                padding: 0.5rem 1.2rem !important;
+                border-radius: 8px !important;
+                font-weight: 700 !important;
+                box-shadow: 0 2px 8px rgba(217, 162, 82, 0.3) !important;
+                margin: 0 0.5rem !important;
+            }
+            
+            nav.desktop-nav a[href="kpsa_landing.html"]::after,
+            nav.desktop-nav a[href="index.html"]::after {
+                display: none !important;
             }
 
             .mobile-menu-btn {
