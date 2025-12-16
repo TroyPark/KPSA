@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="정책자금, 정부지원사업, ISO인증, 특허인증, 바우처, 투자유치, 벤처인증 전문 컨설팅">
+    <title>KPSA - 한국정책솔루션협회</title>
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="shortcut icon" type="image/png" href="Favicon.png">
+    <link rel="apple-touch-icon" href="Favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-padding-top: 100px;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 1rem 80px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background-image: url('main.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(16, 39, 73, 0.75) 0%, rgba(26, 35, 50, 0.85) 100%);
+            z-index: 0;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+            color: white;
+        }
+        
+        /* Problems Section */
+        .problems {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .problems h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 60px;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .problem-card h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin: 20px 0 10px;
+        }
+        
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Solutions Section */
+        .solutions {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .solutions h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .solutions .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .solution-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .solution-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+        
+        .solution-card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* Why Us Section */
+        .why-us {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #102749 0%, #1a3a5c 100%);
+            color: white;
+        }
+        
+        .why-us h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .why-us-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .why-us-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .why-us-card img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            object-fit: contain;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            display: block;
+        }
+        
+        .why-us-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #d9a252;
+        }
+        
+        .why-us-card p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .process h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 60px;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 200px;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .process-step-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            flex: 1;
+        }
+        
+        .process-number {
+            background: #4CAF50;
+            color: white;
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .process-step-text {
+            flex: 1;
+        }
+        
+        .process-step h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .process-step p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2332 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: white;
+        }
+        
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            color: white;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(76, 175, 80, 0.5);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .problems,
+            .solutions,
+            .why-us,
+            .process,
+            .cta {
+                padding: 60px 0;
+            }
+            
+            .problems h2,
+            .solutions h2,
+            .why-us h2,
+            .process h2 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .solution-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .why-us-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .why-us-card img {
+                width: 100px;
+                height: 100px;
+                padding: 15px;
+            }
+            
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .process-step {
+                padding: 25px 20px;
+                min-height: auto;
+            }
+            
+            .process-step-content {
+                gap: 12px;
+            }
+            
+            .process-number {
+                width: 45px;
+                height: 45px;
+                min-width: 45px;
+                font-size: 1.3rem;
+            }
+            
+            .process-step h3 {
+                font-size: 1.2rem;
+            }
+            
+            .process-step p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            html {
+                scroll-padding-top: 80px;
+            }
+            
+            .hero {
+                padding: 140px 1rem 60px;
+                min-height: 500px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .problems,
+            .solutions,
+            .why-us,
+            .process,
+            .cta {
+                padding: 50px 0;
+            }
+            
+            .problems h2,
+            .solutions h2,
+            .why-us h2,
+            .process h2,
+            .cta h2 {
+                font-size: 1.75rem;
+                margin-bottom: 30px;
+            }
+            
+            .problem-card,
+            .solution-card,
+            .process-step {
+                padding: 20px;
+            }
+            
+            .solution-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .process-step {
+                padding: 20px;
+                min-height: auto;
+            }
+            
+            .process-step-content {
+                gap: 12px;
+            }
+            
+            .process-number {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .process-step h3 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            
+            .process-step p {
+                font-size: 0.85rem;
+            }
+            
+            .cta {
+                padding: 70px 0;
+            }
+            
+            .cta h2 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .cta p {
+                font-size: 1.1rem;
+                margin-bottom: 35px;
+            }
+            
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 1.1rem;
+                display: inline-block;
+                width: auto;
+                max-width: 90%;
+            }
+            
+            .why-us-card {
+                padding: 30px 20px;
+            }
+            
+            .why-us-card img {
+                width: 90px;
+                height: 90px;
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .why-us-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .why-us-card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-content">
+                <a href="https://troypark.github.io/KPSA/">
+                    <img src="BI.png" alt="KPSA Logo" class="logo">
+                </a>
+
+                <nav class="desktop-nav">
+                    <a href="index.html">정부지원금</a>
+                    <a href="#solutions">서비스</a>
+                    <a href="#why-us">왜 우리인가</a>
+                    <a href="#process">진행과정</a>
+                    <a href="#" class="btn-contact" onclick="openModal(); return false;">무료 상담문의</a>
+                </nav>
+
+                <div class="mobile-header-actions">
+                    <a href="#" class="mobile-contact-btn" onclick="openModal(); return false;">무료 상담문의</a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
+                        <span id="menu-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <nav>
+                    <a href="index.html" onclick="closeMobileMenu()">정부지원금</a>
+                    <a href="#solutions" onclick="closeMobileMenu()">서비스</a>
+                    <a href="#why-us" onclick="closeMobileMenu()">왜 우리인가</a>
+                    <a href="#process" onclick="closeMobileMenu()">진행과정</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="main" class="hero">
+        <div class="container">
+            <h1>대출이 급한데,<br>나라에서 받는 <span style="color: #4CAF50;">낮은 금리의 대출</span>이 없나?</h1>
+            <p>정부에서 주는 무상지원금이 있다던데, 어렵지 않을까요?</p>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2>이런 어려움을 겪고 계신가요?</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>💥 복잡한 절차</h3>
+                    <p>어디서부터 시작해야 할지 막막하고, 준비 서류가 너무 많아 혼자서 진행하기 어렵습니다.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>😰 까다로운 심사</h3>
+                    <p>심사 기준이 높고 요구사항이 많아 승인받기가 쉽지 않습니다.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>😔 어려운 인증</h3>
+                    <p>기업 인증이나 자격 요건을 충족하기가 어렵고 절차가 복잡합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2>한국정책솔루션협회가 해결해드립니다!</h2>
+            <p class="subtitle">함께라면 어려웠던 정책자금 & 무상지원금 상담이 쉬워집니다</p>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <img src="image/icon-policy-funding.png.png" alt="정책자금 아이콘">
+                    <h3>정책자금</h3>
+                </div>
+                <div class="solution-card">
+                    <img src="image/icon-government-support.png.png" alt="정부지원사업 아이콘">
+                    <h3>정부지원사업</h3>
+                </div>
+                <div class="solution-card">
+                    <img src="image/icon-guarantee-shield.png.png" alt="기업인증 아이콘">
+                    <h3>기업인증</h3>
+                </div>
+                <div class="solution-card">
+                    <img src="image/icon-investment.png.png" alt="투자유치 아이콘">
+                    <h3>투자R&D</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2>왜 한국정책솔루션협회와 함께 해야 할까?</h2>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <img src="image/icon-expert-consultant.png.png" alt="자격증 있는 전문가">
+                    <h3>1. 자격증 있는 전문가가 함께 합니다</h3>
+                    <p>정부지원사업법 전문자도사 라며 누구든 가능하다고 하면서 컨설팅을 할까봐 걱정이신가요?<br><br>정부지원사업법 전문자도사 1급 자격증을 갖춘 전문 컨설턴트가 수료증을 제시합니다.</p>
+                </div>
+                <div class="why-us-card">
+                    <img src="image/icon-guarantee-shield.png.png" alt="100% 환불보장제">
+                    <h3>2. 100% 환불보장제</h3>
+                    <p>결과가 없으면 걱정이 되시나요?<br><br>100% 환불해드립니다.<br>안심하고 편하게 맡기세요.</p>
+                </div>
+                <div class="why-us-card">
+                    <img src="image/icon-workflow-process.png" alt="시간,비용 최소화로 즐거운 맞춤 컨설팅">
+                    <h3>3. 시간,비용 최소화로 즐거운 맞춤 컨설팅</h3>
+                    <p>정부지원사업법 전문자도사 1급 자격증이 있는 전문 컨설턴트가 진행하는 만큼,<br><br>상담접수 > 전문자도사 라며 누구든 배정 > 대면상담 > 문제해결 4가지 단계로 진행됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2>시간,비용 최소화로 즐거운 맞춤 컨설팅</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-step-content">
+                        <div class="process-number">1</div>
+                        <div class="process-step-text">
+                            <h3>상담접수</h3>
+                            <p>하단 상담신청 버튼을 통해 간단히 상담 요청을 남겨주세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-content">
+                        <div class="process-number">2</div>
+                        <div class="process-step-text">
+                            <h3>담당자배정</h3>
+                            <p>담당자 배정을 위해 안내 전화를 드립니다. (010 번호로 발신됩니다.)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-content">
+                        <div class="process-number">3</div>
+                        <div class="process-step-text">
+                            <h3>대면상담</h3>
+                            <p>기업 특성에 맞는 해결 방안을 전문가가 직접 안내드립니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-content">
+                        <div class="process-number">4</div>
+                        <div class="process-step-text">
+                            <h3>문제해결</h3>
+                            <p>최소 비용으로 최적의 효과를 낼 수 있는 맞춤 솔루션을 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>정책자금 잘하는 컨설팅 회사가<br>무상지원금도 잘합니다</h2>
+            <p>지금 바로 무료 상담을 받아보세요</p>
+            <a href="#" class="cta-button" onclick="openModal(); return false;">한국정책솔루션협회 상담신청하기</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="https://troypark.github.io/KPSA/">
+                        <img src="BI.png" alt="KPSA Logo" class="footer-logo">
+                    </a>
+                    <p>복잡한 지원사업, 저희와 함께라면 쉽게 해결됩니다.</p>
+                    <p>사업 성장의 지름길, 정책자금 & 정부지원금을 저희가 도와드립니다.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/woojung_partners" target="_blank" class="social-link" aria-label="인스타그램">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@KPSA-v2j" target="_blank" class="social-link" aria-label="유튜브">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>빠른 링크</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">정부지원금</a></li>
+                        <li><a href="#solutions">서비스</a></li>
+                        <li><a href="#why-us">왜 우리인가</a></li>
+                        <li><a href="#process">진행과정</a></li>
+                        <li><a href="#" onclick="openModal(); return false;">무료 상담문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>회사 정보</h3>
+                    <p>상호명: 한국정책솔루션협회(KPSA)</p>
+                    <p>대표: 유경록 | 사업자등록번호: 618-04-80588</p>
+                    <p>대표번호: 010-7904-1496</p>
+                    <p>팩스: 0504-186-1496</p>
+                    <p>이메일: kpsa1496@gmail.com</p>
+                    <p>업무시간: 평일 오전 10시 ~ 오후 5시</p>
+                    <p style="margin-top: 1rem;">
+                        <a href="#" onclick="openPrivacyModal(); return false;" style="color: var(--accent); text-decoration: underline;">개인정보처리방침</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>COPYRIGHT © 2024 KPSA 한국정책솔루션협회. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Banner -->
+    <div class="floating-banner">
+        <a href="https://open.kakao.com/o/g2BesB5h" target="_blank" class="floating-btn floating-btn-kakao" aria-label="카카오톡 상담">
+            <span class="floating-btn-icon">💬</span>
+            <span class="floating-btn-tooltip">카카오톡 상담</span>
+        </a>
+        <a href="tel:010-7904-1496" class="floating-btn floating-btn-phone" aria-label="전화 상담">
+            <span class="floating-btn-icon">📞</span>
+            <span class="floating-btn-tooltip">전화 상담</span>
+        </a>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="privacy-modal" onclick="closePrivacyModalOnOverlay(event)">
+        <div class="modal-content" onclick="event.stopPropagation()" style="max-width: 800px; max-height: 90vh;">
+            <div class="modal-header">
+                <h2>개인정보 처리방침</h2>
+                <button class="modal-close" onclick="closePrivacyModal()" aria-label="닫기">×</button>
+            </div>
+            <div class="modal-body" style="overflow-y: auto; max-height: calc(90vh - 120px);">
+                <div class="privacy-policy-container" style="max-height: none; background: transparent; border: none; padding: 0;">
+                    <h4>개인정보 처리방침</h4>
+                    <p>한국정책솔루션협회(이하 "협회"라 함)는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+                    
+                    <h5>제1조 (개인정보의 처리 목적)</h5>
+                    <p>협회는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+                    <ul>
+                        <li>컨설팅 상담 신청 및 서비스 제공</li>
+                        <li>정책자금, 정부지원사업, 기업인증, 투자유치 컨설팅 상담 접수 및 처리</li>
+                        <li>담당 컨설턴트 배정 및 고객 응대</li>
+                        <li>대면 또는 비대면 상담 일정 조율 및 진행</li>
+                        <li>맞춤형 솔루션 제공 및 사후관리</li>
+                        <li>민원사무 처리</li>
+                        <li>고객 문의 및 불만사항 처리</li>
+                        <li>서비스 이용 관련 안내 및 공지사항 전달</li>
+                    </ul>
+
+                    <h5>제2조 (개인정보의 처리 및 보유기간)</h5>
+                    <p>협회는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
+                    <ul>
+                        <li>상담 신청 및 서비스 제공: 서비스 제공 완료 후 3년</li>
+                        <li>민원 처리: 민원 처리 완료 후 3년</li>
+                        <li>마케팅 활용 (동의 시): 동의 철회 시까지 또는 3년</li>
+                    </ul>
+
+                    <h5>제3조 (처리하는 개인정보의 항목)</h5>
+                    <p>협회는 다음의 개인정보 항목을 처리하고 있습니다.</p>
+                    <p><strong>1. 필수 수집 항목:</strong> 성명(대표자명 또는 담당자명), 연락처(휴대전화번호), 기업명 또는 상호, 업종, 상담 희망 분야</p>
+                    <p><strong>2. 선택 수집 항목:</strong> 이메일 주소, 회사 주소, 기타 상담 내용과 관련된 추가 정보</p>
+                    <p><strong>3. 자동 수집 항목:</strong> 접속 IP 정보, 쿠키, 서비스 이용 기록, 접속 로그, 방문 일시</p>
+
+                    <h5>제4조 (개인정보의 제3자 제공)</h5>
+                    <p>협회는 원칙적으로 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다. 현재 협회는 고객의 개인정보를 제3자에게 제공하지 않습니다.</p>
+
+                    <h5>제5조 (개인정보처리의 위탁)</h5>
+                    <p>협회는 원활한 서비스 제공을 위해 개인정보 처리업무를 외부 전문업체에 위탁할 수 있으며, 위탁 계약 시 「개인정보 보호법」 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적·관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리·감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</p>
+
+                    <h5>제6조 (정보주체의 권리·의무 및 행사방법)</h5>
+                    <p>정보주체는 협회에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
+                    <ul>
+                        <li>개인정보 열람 요구</li>
+                        <li>오류 등이 있을 경우 정정 요구</li>
+                        <li>삭제 요구</li>
+                        <li>처리정지 요구</li>
+                    </ul>
+
+                    <h5>제7조 (개인정보의 파기)</h5>
+                    <p>협회는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. 전자적 파일 형태는 복원이 불가능한 방법으로 영구 삭제하며, 기록물, 인쇄물, 서면 등은 파쇄 또는 소각합니다.</p>
+
+                    <h5>제8조 (개인정보의 안전성 확보조치)</h5>
+                    <p>협회는 「개인정보 보호법」 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p>
+                    <ul>
+                        <li>개인정보 취급 직원의 최소화 및 교육</li>
+                        <li>내부관리계획의 수립 및 시행</li>
+                        <li>개인정보의 암호화</li>
+                        <li>해킹 등에 대비한 기술적 대책</li>
+                        <li>개인정보에 대한 접근 제한</li>
+                        <li>접속기록의 보관 및 위변조 방지</li>
+                    </ul>
+
+                    <h5>제9조 (개인정보 보호책임자)</h5>
+                    <p><strong>▶ 개인정보 보호책임자</strong></p>
+                    <ul>
+                        <li>성명: 유경록</li>
+                        <li>직책: 대표</li>
+                        <li>연락처: 010-7904-1496</li>
+                        <li>이메일: kpsa1496@gmail.com</li>
+                    </ul>
+
+                    <h5>제10조 (권익침해 구제방법)</h5>
+                    <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+                    <ul>
+                        <li>개인정보분쟁조정위원회: 1833-6972 (www.kopico.go.kr)</li>
+                        <li>개인정보침해신고센터: (국번없이) 118 (privacy.kisa.or.kr)</li>
+                        <li>대검찰청: (국번없이) 1301 (www.spo.go.kr)</li>
+                        <li>경찰청: (국번없이) 182 (ecrm.cyber.go.kr)</li>
+                    </ul>
+
+                    <p style="margin-top: 1rem; font-size: 0.8125rem; color: #666;">본 개인정보 처리방침 시행일자: 2025년 12월 01일</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="contact-modal" onclick="closeModalOnOverlay(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>무료 상담 문의</h2>
+                <button class="modal-close" onclick="closeModal()" aria-label="닫기">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="section-header">
+                    <p>전문 컨설턴트가 직접 상담해드립니다</p>
+                </div>
+
+                <form class="contact-form" id="contact-form-modal" onsubmit="handleSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name-modal">이름 <span class="required">*</span></label>
+                            <input type="text" id="name-modal" name="name" required placeholder="이름을 입력해주세요" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-modal">회사명</label>
+                            <input type="text" id="company-modal" name="company" placeholder="회사명을 입력해주세요" maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-modal">연락처 <span class="required">*</span></label>
+                            <input type="tel" id="phone-modal" name="phone" required placeholder="010-0000-0000" oninput="formatPhoneNumber(this)" maxlength="15" pattern="[0-9-]+">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-modal">이메일</label>
+                            <input type="email" id="email-modal" name="email" placeholder="example@email.com" maxlength="100">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="service-modal">문의 서비스 <span class="required">*</span></label>
+                            <select id="service-modal" name="service" required>
+                                <option value="">서비스를 선택해주세요</option>
+                                <option value="정책자금">정책자금</option>
+                                <option value="정부지원사업">정부지원사업</option>
+                                <option value="ISO인증">ISO인증</option>
+                                <option value="특허 인증">특허 인증</option>
+                                <option value="바우처">바우처</option>
+                                <option value="투자유치">투자유치</option>
+                                <option value="벤처 인증">벤처 인증</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message-modal">문의 내용</label>
+                            <textarea id="message-modal" name="message" placeholder="문의하실 내용을 입력해주세요" maxlength="1000"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="alert-message-modal"></div>
+
+                    <div class="privacy-policy-container">
+                        <h4>개인정보 처리방침</h4>
+                        <p>한국정책솔루션협회(이하 "협회"라 함)는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+                        
+                        <h5>제1조 (개인정보의 처리 목적)</h5>
+                        <p>협회는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+                        <ul>
+                            <li>컨설팅 상담 신청 및 서비스 제공</li>
+                            <li>정책자금, 정부지원사업, 기업인증, 투자유치 컨설팅 상담 접수 및 처리</li>
+                            <li>담당 컨설턴트 배정 및 고객 응대</li>
+                            <li>대면 또는 비대면 상담 일정 조율 및 진행</li>
+                            <li>맞춤형 솔루션 제공 및 사후관리</li>
+                            <li>민원사무 처리</li>
+                            <li>고객 문의 및 불만사항 처리</li>
+                            <li>서비스 이용 관련 안내 및 공지사항 전달</li>
+                        </ul>
+
+                        <h5>제2조 (개인정보의 처리 및 보유기간)</h5>
+                        <p>협회는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
+                        <ul>
+                            <li>상담 신청 및 서비스 제공: 서비스 제공 완료 후 3년</li>
+                            <li>민원 처리: 민원 처리 완료 후 3년</li>
+                            <li>마케팅 활용 (동의 시): 동의 철회 시까지 또는 3년</li>
+                        </ul>
+
+                        <h5>제3조 (처리하는 개인정보의 항목)</h5>
+                        <p>협회는 다음의 개인정보 항목을 처리하고 있습니다.</p>
+                        <p><strong>1. 필수 수집 항목:</strong> 성명(대표자명 또는 담당자명), 연락처(휴대전화번호), 기업명 또는 상호, 업종, 상담 희망 분야</p>
+                        <p><strong>2. 선택 수집 항목:</strong> 이메일 주소, 회사 주소, 기타 상담 내용과 관련된 추가 정보</p>
+                        <p><strong>3. 자동 수집 항목:</strong> 접속 IP 정보, 쿠키, 서비스 이용 기록, 접속 로그, 방문 일시</p>
+
+                        <h5>제4조 (개인정보의 제3자 제공)</h5>
+                        <p>협회는 원칙적으로 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다. 현재 협회는 고객의 개인정보를 제3자에게 제공하지 않습니다.</p>
+
+                        <h5>제5조 (개인정보처리의 위탁)</h5>
+                        <p>협회는 원활한 서비스 제공을 위해 개인정보 처리업무를 외부 전문업체에 위탁할 수 있으며, 위탁 계약 시 「개인정보 보호법」 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적·관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리·감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</p>
+
+                        <h5>제6조 (정보주체의 권리·의무 및 행사방법)</h5>
+                        <p>정보주체는 협회에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
+                        <ul>
+                            <li>개인정보 열람 요구</li>
+                            <li>오류 등이 있을 경우 정정 요구</li>
+                            <li>삭제 요구</li>
+                            <li>처리정지 요구</li>
+                        </ul>
+
+                        <h5>제7조 (개인정보의 파기)</h5>
+                        <p>협회는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. 전자적 파일 형태는 복원이 불가능한 방법으로 영구 삭제하며, 기록물, 인쇄물, 서면 등은 파쇄 또는 소각합니다.</p>
+
+                        <h5>제8조 (개인정보의 안전성 확보조치)</h5>
+                        <p>협회는 「개인정보 보호법」 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p>
+                        <ul>
+                            <li>개인정보 취급 직원의 최소화 및 교육</li>
+                            <li>내부관리계획의 수립 및 시행</li>
+                            <li>개인정보의 암호화</li>
+                            <li>해킹 등에 대비한 기술적 대책</li>
+                            <li>개인정보에 대한 접근 제한</li>
+                            <li>접속기록의 보관 및 위변조 방지</li>
+                        </ul>
+
+                        <h5>제9조 (개인정보 보호책임자)</h5>
+                        <p><strong>▶ 개인정보 보호책임자</strong></p>
+                        <ul>
+                            <li>성명: 유경록</li>
+                            <li>직책: 대표</li>
+                            <li>연락처: 010-7904-1496</li>
+                            <li>이메일: kpsa1496@gmail.com</li>
+                        </ul>
+
+                        <h5>제10조 (권익침해 구제방법)</h5>
+                        <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+                        <ul>
+                            <li>개인정보분쟁조정위원회: 1833-6972 (www.kopico.go.kr)</li>
+                            <li>개인정보침해신고센터: (국번없이) 118 (privacy.kisa.or.kr)</li>
+                            <li>대검찰청: (국번없이) 1301 (www.spo.go.kr)</li>
+                            <li>경찰청: (국번없이) 182 (ecrm.cyber.go.kr)</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem; font-size: 0.8125rem; color: #666;">본 개인정보 처리방침 시행일자: 2025년 12월 01일</p>
+                    </div>
+
+                    <div class="privacy-agreement">
+                        <input type="checkbox" id="privacy-agree" name="privacy-agree" required>
+                        <label for="privacy-agree">
+                            <strong>개인정보 처리방침에 동의합니다.</strong> (필수)<br>
+                            <span style="font-size: 0.8125rem; color: #666;">위 개인정보 처리방침을 확인하였으며, 개인정보 수집 및 이용에 동의합니다.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-submit" id="submit-btn-modal">무료 상담 신청하기</button>
+                    <p class="form-note">* 필수 항목은 반드시 입력해주세요</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('active');
+            icon.textContent = menu.classList.contains('active') ? '✕' : '☰';
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.remove('active');
+            icon.textContent = '☰';
+        }
+
+        function openModal() {
+            document.getElementById('contact-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('contact-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnOverlay(event) {
+            if (event.target === event.currentTarget) {
+                closeModal();
+            }
+        }
+
+        function openPrivacyModal() {
+            document.getElementById('privacy-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacy-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closePrivacyModalOnOverlay(event) {
+            if (event.target === event.currentTarget) {
+                closePrivacyModal();
+            }
+        }
+
+        // ESC 키로 모달 닫기
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const privacyModal = document.getElementById('privacy-modal');
+                if (privacyModal && privacyModal.classList.contains('active')) {
+                    closePrivacyModal();
+                }
+                closeModal();
+            }
+        });
+
+        // 전화번호 자동 포맷팅 함수
+        function formatPhoneNumber(input) {
+            let value = input.value.replace(/[^0-9]/g, '');
+            
+            if (value.length <= 3) {
+                input.value = value;
+            } else if (value.length <= 7) {
+                input.value = value.slice(0, 3) + '-' + value.slice(3);
+            } else if (value.length <= 10) {
+                input.value = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7);
+            } else {
+                input.value = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7, 11);
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submit-btn-modal');
+            const alertDiv = document.getElementById('alert-message-modal');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = '제출 중...';
+            alertDiv.innerHTML = '';
+            
+            const formData = new FormData(form);
+            
+            const name = (formData.get('name') || '').trim();
+            const company = (formData.get('company') || '').trim();
+            const phone = (formData.get('phone') || '').trim();
+            const email = (formData.get('email') || '').trim();
+            const service = (formData.get('service') || '').trim();
+            const message = (formData.get('message') || '').trim();
+            
+            if (!name || !phone || !service) {
+                alertDiv.innerHTML = '<div class="alert alert-error">필수 항목을 모두 입력해주세요.</div>';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 상담 신청하기';
+                return;
+            }
+            
+            const privacyAgree = document.getElementById('privacy-agree');
+            if (!privacyAgree.checked) {
+                alertDiv.innerHTML = '<div class="alert alert-error">개인정보 처리방침에 동의해주세요.</div>';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 상담 신청하기';
+                privacyAgree.focus();
+                return;
+            }
+            
+            const phoneRegex = /^[0-9-]+$/;
+            if (!phoneRegex.test(phone) || phone.replace(/[^0-9]/g, '').length < 10) {
+                alertDiv.innerHTML = '<div class="alert alert-error">올바른 연락처를 입력해주세요.</div>';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 상담 신청하기';
+                return;
+            }
+            
+            if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alertDiv.innerHTML = '<div class="alert alert-error">올바른 이메일 형식을 입력해주세요.</div>';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 상담 신청하기';
+                return;
+            }
+            
+            const data = {
+                name: name.substring(0, 50),
+                company: company.substring(0, 100),
+                phone: phone.substring(0, 20),
+                email: email.substring(0, 100),
+                service: service.substring(0, 50),
+                message: message.substring(0, 1000)
+            };
+            
+            const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzhDRukoMqjr7CIbEI7rvxGeLQ5cT3P6Qf9UNixznz4UnUDNzFORL4KRKonpF-cTPE/exec';
+            
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                alertDiv.innerHTML = '<div class="alert alert-success">상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.</div>';
+                form.reset();
+                document.getElementById('privacy-agree').checked = false;
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 상담 신청하기';
+                setTimeout(() => closeModal(), 2000);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alertDiv.innerHTML = '<div class="alert alert-success">상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.</div>';
+                form.reset();
+                document.getElementById('privacy-agree').checked = false;
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 상담 신청하기';
+                setTimeout(() => closeModal(), 2000);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('onclick') || this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top: offset, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
