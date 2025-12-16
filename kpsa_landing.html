@@ -4,556 +4,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="정책자금, 정부지원사업, ISO인증, 특허인증, 바우처, 투자유치, 벤처인증 전문 컨설팅">
-    <title>KPSA - 한국정책솔루션협회</title>
+    <meta name="description" content="정책자금, 정부지원사업 전문 컨설턴트 소개 - 한국정책솔루션협회">
+    <title>전문가 소개 - KPSA 한국정책솔루션협회</title>
     <link rel="icon" type="image/png" href="Favicon.png">
     <link rel="shortcut icon" type="image/png" href="Favicon.png">
     <link rel="apple-touch-icon" href="Favicon.png">
     <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-padding-top: 100px;
-        }
-
-        body {
-            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            padding-top: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 1rem 80px;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            background-image: url('main.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        .professional-hero {
+            padding: 180px 1rem 100px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a5c 100%);
             color: white;
             text-align: center;
-            margin-top: 0;
             position: relative;
             overflow: hidden;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(16, 39, 73, 0.75) 0%, rgba(26, 35, 50, 0.85) 100%);
-            z-index: 0;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-        }
-
-        .hero h1 {
+        .professional-hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
-            line-height: 1.2;
-            color: white;
         }
 
-        .hero p {
+        .professional-hero p {
             font-size: 1.25rem;
-            margin-bottom: 0.5rem;
             opacity: 0.95;
-            color: white;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        /* Problems Section */
-        .problems {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-
-        .problems h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 60px;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .problem-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .problem-card h3 {
-            font-size: 1.3rem;
-            color: #2c3e50;
-            margin: 20px 0 10px;
-        }
-
-        .problem-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Solutions Section */
-        .solutions {
+        .experts-section {
             padding: 80px 0;
             background: white;
         }
 
-        .solutions h2 {
+        .experts-section h2 {
             text-align: center;
             font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        .solutions .subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
+            color: var(--primary);
             margin-bottom: 60px;
         }
 
-        .solution-grid {
+        .expert-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .solution-card {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .solution-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .solution-card img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 20px;
-            object-fit: contain;
-        }
-
-        .solution-card h3 {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        /* Why Us Section */
-        .why-us {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #102749 0%, #1a3a5c 100%);
-            color: white;
-        }
-
-        .why-us h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-        }
-
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
+            margin-bottom: 60px;
         }
 
-        .why-us-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .why-us-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .why-us-card img {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            object-fit: contain;
+        .expert-card {
             background: white;
             border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-            display: block;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .why-us-card h3 {
+        .expert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .expert-avatar {
+            width: 180px;
+            height: 240px;
+            border-radius: 16px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--accent), #f4c430);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(217, 162, 82, 0.3);
+            overflow: hidden;
+        }
+
+        .expert-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .expert-name {
             font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #d9a252;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
-        .why-us-card p {
+        .expert-title {
             font-size: 1.1rem;
-            opacity: 0.95;
-            line-height: 1.8;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 600;
         }
 
-        /* Process Section */
-        .process {
+        .expert-certifications {
+            margin: 20px 0;
+        }
+
+        .certification-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), #0a1f3a);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .expert-experience {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .expert-experience h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .expert-experience ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .expert-experience li {
+            padding: 8px 0;
+            color: var(--secondary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .expert-experience li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .qualifications-section {
             padding: 80px 0;
             background: #f8f9fa;
         }
 
-        .process h2 {
+        .qualifications-section h2 {
             text-align: center;
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: var(--primary);
             margin-bottom: 60px;
         }
 
-        .process-grid {
+        .qualification-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
 
-        .process-step {
+        .qualification-card {
             background: white;
-            padding: 30px 25px;
+            padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            min-height: 200px;
-        }
-
-        .process-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .process-step-content {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            flex: 1;
-        }
-
-        .process-number {
-            background: #4CAF50;
-            color: white;
-            width: 50px;
-            height: 50px;
-            min-width: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .process-step-text {
-            flex: 1;
-        }
-
-        .process-step h3 {
-            font-size: 1.4rem;
-            color: #2c3e50;
-            margin-bottom: 12px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-
-        .process-step p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #2c3e50 0%, #1a2332 100%);
-            color: white;
             text-align: center;
-            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .cta .container {
-            position: relative;
-            z-index: 1;
+        .qualification-card:hover {
+            transform: translateY(-5px);
         }
 
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-            font-weight: 700;
-            line-height: 1.4;
-            color: white;
+        .qualification-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
-        .cta p {
+        .qualification-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
             font-size: 1.3rem;
-            margin-bottom: 50px;
-            opacity: 0.95;
-            color: white;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 18px 50px;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        .qualification-card p {
+            color: var(--secondary);
+            font-size: 0.95rem;
         }
 
-        .cta-button:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(76, 175, 80, 0.5);
+        /* Certificate Slider */
+        .certificate-slider-container {
+            margin-top: 60px;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(246, 239, 229, 0.3), rgba(255, 255, 255, 0.5));
+            padding: 40px 0;
+            border-radius: 16px;
         }
 
-        .cta-button:active {
-            transform: translateY(0);
+        .certificate-slider {
+            width: 100%;
+            overflow: hidden;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
+        .certificate-track {
+            display: flex;
+            gap: 30px;
+            animation: scroll 30s linear infinite;
+            width: max-content;
+        }
 
-            .problems,
-            .solutions,
-            .why-us,
-            .process,
-            .cta {
-                padding: 60px 0;
+        .certificate-img {
+            height: 400px;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            object-fit: contain;
+        }
+
+        .certificate-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
             }
 
-            .problems h2,
-            .solutions h2,
-            .why-us h2,
-            .process h2 {
-                font-size: 2rem;
-                margin-bottom: 40px;
-            }
-
-            .solution-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-
-            .problem-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .why-us-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .why-us-card img {
-                width: 100px;
-                height: 100px;
-                padding: 15px;
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-
-            .process-step {
-                padding: 25px 20px;
-                min-height: auto;
-            }
-
-            .process-step-content {
-                gap: 12px;
-            }
-
-            .process-number {
-                width: 45px;
-                height: 45px;
-                min-width: 45px;
-                font-size: 1.3rem;
-            }
-
-            .process-step h3 {
-                font-size: 1.2rem;
-            }
-
-            .process-step p {
-                font-size: 0.9rem;
+            100% {
+                transform: translateX(-50%);
             }
         }
 
         @media (max-width: 768px) {
-            html {
-                scroll-padding-top: 80px;
-            }
-
-            .hero {
+            .professional-hero {
                 padding: 140px 1rem 60px;
-                min-height: 500px;
             }
 
-            .hero h1 {
+            .professional-hero h1 {
                 font-size: 2rem;
-                line-height: 1.3;
             }
 
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .problems,
-            .solutions,
-            .why-us,
-            .process,
-            .cta {
-                padding: 50px 0;
-            }
-
-            .problems h2,
-            .solutions h2,
-            .why-us h2,
-            .process h2,
-            .cta h2 {
-                font-size: 1.75rem;
-                margin-bottom: 30px;
-            }
-
-            .problem-card,
-            .solution-card,
-            .process-step {
-                padding: 20px;
-            }
-
-            .solution-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-
-            .process-grid {
+            .expert-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
             }
 
-            .process-step {
-                padding: 20px;
-                min-height: auto;
+            .qualification-grid {
+                grid-template-columns: 1fr;
             }
 
-            .process-step-content {
-                gap: 12px;
+            .certificate-img {
+                height: 250px;
             }
 
-            .process-number {
-                width: 40px;
-                height: 40px;
-                min-width: 40px;
-                font-size: 1.2rem;
-            }
-
-            .process-step h3 {
-                font-size: 1.1rem;
-                margin-bottom: 10px;
-            }
-
-            .process-step p {
-                font-size: 0.85rem;
-            }
-
-            .cta {
-                padding: 70px 0;
-            }
-
-            .cta h2 {
-                font-size: 1.8rem;
-                line-height: 1.3;
-            }
-
-            .cta p {
-                font-size: 1.1rem;
-                margin-bottom: 35px;
-            }
-
-            .cta-button {
-                padding: 16px 40px;
-                font-size: 1.1rem;
-                display: inline-block;
-                width: auto;
-                max-width: 90%;
-            }
-
-            .why-us-card {
-                padding: 30px 20px;
-            }
-
-            .why-us-card img {
-                width: 90px;
-                height: 90px;
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-
-            .why-us-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .why-us-card p {
-                font-size: 1rem;
+            .certificate-slider-container {
+                margin-top: 40px;
+                padding: 30px 0;
             }
         }
     </style>
@@ -570,153 +285,145 @@
 
                 <nav class="desktop-nav">
                     <a href="index.html">정부지원사업</a>
-                    <a href="#solutions">서비스</a>
-                    <a href="#why-us">왜 우리인가</a>
-                    <a href="#process">진행과정</a>
-                    <a href="professional.html">전문가소개</a>
+                    <a href="kpsa_landing.html">정부지원대출</a>
                     <a href="#" class="btn-contact" onclick="openModal(); return false;">무료 상담문의</a>
                 </nav>
 
                 <div class="mobile-header-actions">
                     <a href="index.html" class="mobile-contact-btn mobile-support-btn">정부지원사업</a>
+                    <a href="kpsa_landing.html" class="mobile-contact-btn mobile-loan-btn">정부지원대출</a>
                     <a href="#" class="mobile-contact-btn" onclick="openModal(); return false;">무료 상담문의</a>
-                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
-                        <span id="menu-icon">☰</span>
-                    </button>
                 </div>
             </div>
 
-            <div class="mobile-menu" id="mobile-menu">
-                <nav>
-                    <a href="#solutions" onclick="closeMobileMenu()">서비스</a>
-                    <a href="#why-us" onclick="closeMobileMenu()">왜 우리인가</a>
-                    <a href="#process" onclick="closeMobileMenu()">진행과정</a>
-                    <a href="professional.html" onclick="closeMobileMenu()">전문가소개</a>
-                </nav>
-            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="main" class="hero">
+    <!-- Professional Hero Section -->
+    <section class="professional-hero">
         <div class="container">
-            <h1>대출이 급한데,<br>나라에서 받는 <span style="color: #4CAF50;">낮은 금리의 대출</span>이 없나?</h1>
-            <p>정부에서 주는 무상지원금이 있다던데, 어렵지 않을까요?</p>
+            <h1>전문가 소개</h1>
+            <p>정부지원사업법 전문자도사 1급 자격증을 갖춘 전문 컨설턴트가<br>여러분의 성공을 위해 함께합니다</p>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section class="problems">
+    <!-- Experts Section -->
+    <section class="experts-section">
         <div class="container">
-            <h2>이런 어려움을 겪고 계신가요?</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>💥 복잡한 절차</h3>
-                    <p>어디서부터 시작해야 할지 막막하고, 준비 서류가 너무 많아 혼자서 진행하기 어렵습니다.</p>
+            <h2>우리의 전문가들</h2>
+            <div class="expert-grid">
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <img src="image/pro_yoo.jpg" alt="유경록 대표">
+                    </div>
+                    <h3 class="expert-name">유경록</h3>
+                    <p class="expert-title">대표</p>
+                    <div class="expert-certifications">
+                        <span class="certification-badge">정부지원사업법 전문자도사 1급</span>
+                        <span class="certification-badge">정책자금 컨설팅 전문가</span>
+                    </div>
+                    <div class="expert-experience">
+                        <h4>주요 경력</h4>
+                        <ul>
+                            <li>한국정책솔루션협회 대표이사</li>
+                            <li>정책자금 컨설팅 15년 이상 경력</li>
+                            <li>정부지원사업 컨설팅 전문가</li>
+                            <li>중소기업 정책자금 승인 500건 이상</li>
+                            <li>기업인증 컨설팅 (벤처, 이노비즈, 메인비즈)</li>
+                            <li>투자유치 컨설팅 및 IR 전문가</li>
+                            <li>사업계획서 작성 및 재무분석 전문</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="problem-card">
-                    <h3>😰 까다로운 심사</h3>
-                    <p>심사 기준이 높고 요구사항이 많아 승인받기가 쉽지 않습니다.</p>
+
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <img src="image/pro_bin.jpg" alt="이두빈 부대표">
+                    </div>
+                    <h3 class="expert-name">이두빈</h3>
+                    <p class="expert-title">부대표</p>
+                    <div class="expert-certifications">
+                        <span class="certification-badge">정부지원사업법 전문자도사 1급</span>
+                        <span class="certification-badge">R&D 지원사업 전문가</span>
+                    </div>
+                    <div class="expert-experience">
+                        <h4>주요 경력</h4>
+                        <ul>
+                            <li>한국정책솔루션협회 부대표</li>
+                            <li>정부지원사업 컨설팅 12년 이상 경력</li>
+                            <li>R&D 연구개발 지원사업 전문</li>
+                            <li>기술혁신 바우처 컨설팅</li>
+                            <li>특허 출원 및 지식재산권 컨설팅</li>
+                            <li>ISO 인증 컨설팅 전문가</li>
+                            <li>정부지원사업 신청서 작성 및 심사 대응</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="problem-card">
-                    <h3>😔 어려운 인증</h3>
-                    <p>기업 인증이나 자격 요건을 충족하기가 어렵고 절차가 복잡합니다.</p>
+
+                <div class="expert-card">
+                    <div class="expert-avatar">
+                        <img src="image/pro_ji.jpg" alt="권지민 팀장">
+                    </div>
+                    <h3 class="expert-name">권지민</h3>
+                    <p class="expert-title">팀장</p>
+                    <div class="expert-certifications">
+                        <span class="certification-badge">정부지원사업법 전문자도사 1급</span>
+                        <span class="certification-badge">창업 지원 전문가</span>
+                    </div>
+                    <div class="expert-experience">
+                        <h4>주요 경력</h4>
+                        <ul>
+                            <li>한국정책솔루션협회 컨설팅팀 팀장</li>
+                            <li>정책자금 컨설팅 8년 이상 경력</li>
+                            <li>창업 지원사업 전문 컨설턴트</li>
+                            <li>청년창업 지원사업 컨설팅</li>
+                            <li>스타트업 투자유치 지원</li>
+                            <li>사업계획서 작성 및 발표 자료 제작</li>
+                            <li>정책자금 신청 프로세스 관리</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="solutions">
+    <!-- Qualifications Section -->
+    <section class="qualifications-section">
         <div class="container">
-            <h2>한국정책솔루션협회가 해결해드립니다!</h2>
-            <p class="subtitle">함께라면 어려웠던 정책자금 & 무상지원금 상담이 쉬워집니다</p>
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <img src="image/icon-policy-funding.png.png" alt="정책자금 아이콘">
-                    <h3>정책자금</h3>
+            <h2>전문 자격 및 인증</h2>
+            <div class="qualification-grid">
+                <div class="qualification-card">
+                    <div class="qualification-icon">🎓</div>
+                    <h3>정부지원사업법<br>전문자도사 1급</h3>
+                    <p>정부지원사업 관련 법규 및 제도를 전문적으로 이해하고 적용할 수 있는 최고 등급 자격증</p>
                 </div>
-                <div class="solution-card">
-                    <img src="image/icon-government-support.png.png" alt="정부지원사업 아이콘">
-                    <h3>정부지원사업</h3>
+                <div class="qualification-card">
+                    <div class="qualification-icon">💼</div>
+                    <h3>정책자금 컨설팅<br>전문가</h3>
+                    <p>다양한 정책자금 프로그램에 대한 깊은 이해와 성공적인 신청 경험</p>
                 </div>
-                <div class="solution-card">
-                    <img src="image/icon-guarantee-shield.png.png" alt="기업인증 아이콘">
-                    <h3>기업인증</h3>
+                <div class="qualification-card">
+                    <div class="qualification-icon">📋</div>
+                    <h3>기업 인증<br>전문가</h3>
+                    <p>벤처기업, 이노비즈, 메인비즈 등 다양한 기업 인증 컨설팅 경험</p>
                 </div>
-                <div class="solution-card">
-                    <img src="image/icon-investment.png.png" alt="투자유치 아이콘">
-                    <h3>투자R&D</h3>
+                <div class="qualification-card">
+                    <div class="qualification-icon">💡</div>
+                    <h3>투자유치<br>전문가</h3>
+                    <p>IR 자료 작성 및 투자자 연결을 통한 성공적인 투자유치 경험</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="why-us">
-        <div class="container">
-            <h2>왜 한국정책솔루션협회와 함께 해야 할까?</h2>
-            <div class="why-us-grid">
-                <div class="why-us-card">
-                    <img src="image/icon-expert-consultant.png.png" alt="자격증 있는 전문가">
-                    <h3>1. 자격증 있는 전문가가 함께 합니다</h3>
-                    <p>정부지원사업법 전문자도사 라며 누구든 가능하다고 하면서 컨설팅을 할까봐 걱정이신가요?<br><br>정부지원사업법 전문자도사 1급 자격증을 갖춘 전문 컨설턴트가 수료증을
-                        제시합니다.</p>
-                </div>
-                <div class="why-us-card">
-                    <img src="image/icon-guarantee-shield.png.png" alt="100% 환불보장제">
-                    <h3>2. 100% 환불보장제</h3>
-                    <p>결과가 없으면 걱정이 되시나요?<br><br>100% 환불해드립니다.<br>안심하고 편하게 맡기세요.</p>
-                </div>
-                <div class="why-us-card">
-                    <img src="image/icon-workflow-process.png" alt="시간,비용 최소화로 즐거운 맞춤 컨설팅">
-                    <h3>3. 시간,비용 최소화로 즐거운 맞춤 컨설팅</h3>
-                    <p>정부지원사업법 전문자도사 1급 자격증이 있는 전문 컨설턴트가 진행하는 만큼,<br><br>상담접수 > 전문자도사 라며 누구든 배정 > 대면상담 > 문제해결 4가지 단계로
-                        진행됩니다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <div class="container">
-            <h2>시간,비용 최소화로 즐거운 맞춤 컨설팅</h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-step-content">
-                        <div class="process-number">1</div>
-                        <div class="process-step-text">
-                            <h3>상담접수</h3>
-                            <p>하단 상담신청 버튼을 통해 간단히 상담 요청을 남겨주세요.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-content">
-                        <div class="process-number">2</div>
-                        <div class="process-step-text">
-                            <h3>담당자배정</h3>
-                            <p>담당자 배정을 위해 안내 전화를 드립니다. (010 번호로 발신됩니다.)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-content">
-                        <div class="process-number">3</div>
-                        <div class="process-step-text">
-                            <h3>대면상담</h3>
-                            <p>기업 특성에 맞는 해결 방안을 전문가가 직접 안내드립니다.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-content">
-                        <div class="process-number">4</div>
-                        <div class="process-step-text">
-                            <h3>문제해결</h3>
-                            <p>최소 비용으로 최적의 효과를 낼 수 있는 맞춤 솔루션을 제공합니다.</p>
-                        </div>
+            <!-- Certificate Image Slider -->
+            <div class="certificate-slider-container">
+                <div class="certificate-slider">
+                    <div class="certificate-track">
+                        <img src="image/ex_yoo.jpg" alt="유경록 대표 자격증" class="certificate-img">
+                        <img src="image/ex_bin.jpg" alt="이두빈 부대표 자격증" class="certificate-img">
+                        <img src="image/ex_yoo.jpg" alt="유경록 대표 자격증" class="certificate-img">
+                        <img src="image/ex_bin.jpg" alt="이두빈 부대표 자격증" class="certificate-img">
+                        <img src="image/ex_yoo.jpg" alt="유경록 대표 자격증" class="certificate-img">
+                        <img src="image/ex_bin.jpg" alt="이두빈 부대표 자격증" class="certificate-img">
                     </div>
                 </div>
             </div>
@@ -726,7 +433,7 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>정책자금 잘하는 컨설팅 회사가<br>무상지원금도 잘합니다</h2>
+            <h2>전문가와 함께하는<br>성공적인 정책자금 & 정부지원금</h2>
             <p>지금 바로 무료 상담을 받아보세요</p>
             <a href="#" class="cta-button" onclick="openModal(); return false;">한국정책솔루션협회 상담신청하기</a>
         </div>
@@ -762,10 +469,9 @@
                 <div class="footer-section">
                     <h3>빠른 링크</h3>
                     <ul class="footer-links">
+                        <li><a href="kpsa_landing.html">정부지원대출</a></li>
                         <li><a href="index.html">정부지원금</a></li>
-                        <li><a href="#solutions">서비스</a></li>
-                        <li><a href="#why-us">왜 우리인가</a></li>
-                        <li><a href="#process">진행과정</a></li>
+                        <li><a href="professional.html">전문가 소개</a></li>
                         <li><a href="#" onclick="openModal(); return false;">무료 상담문의</a></li>
                     </ul>
                 </div>
@@ -1224,19 +930,6 @@
                     setTimeout(() => closeModal(), 2000);
                 });
         }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('onclick') || this.getAttribute('href') === '#') return;
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                    window.scrollTo({ top: offset, behavior: 'smooth' });
-                }
-            });
-        });
     </script>
 </body>
 
